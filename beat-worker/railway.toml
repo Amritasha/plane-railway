@@ -1,10 +1,7 @@
 [build]
 builder = "dockerfile"
-dockerfilePath = "web/Dockerfile"
+dockerfilePath = "beat-worker/Dockerfile"
 
 [deploy]
-port = 3000
-healthcheckPath = "/"
-healthcheckTimeout = 300
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 3

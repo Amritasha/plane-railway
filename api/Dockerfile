@@ -1,5 +1,3 @@
-FROM makeplane/plane-backend:latest
+FROM makeplane/plane-backend:stable
 
 EXPOSE 8000
-
-CMD ["./bin/docker-entrypoint-api.sh"]

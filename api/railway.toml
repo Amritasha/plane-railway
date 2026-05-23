@@ -3,7 +3,9 @@ builder = "dockerfile"
 dockerfilePath = "api/Dockerfile"
 
 [deploy]
+startCommand = "sh -c './bin/docker-entrypoint-migrator.sh && ./bin/docker-entrypoint-api.sh'"
+port = 8000
 healthcheckPath = "/api/health/"
-healthcheckTimeout = 120
+healthcheckTimeout = 300
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 3
